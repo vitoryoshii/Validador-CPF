@@ -6,8 +6,8 @@ def validarCPF(cpf):
     if len(cpf) == 14:
         cpf = cpf.replace(".", "").replace("-", "")
     
-    #Valida se CPF tem 11 digitos
-    if len(cpf) != 11:
+    #Valida se CPF tem 11 digitos e se é números iguais (inválidos)
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
         return False
     
     #Verifica primeiro digito

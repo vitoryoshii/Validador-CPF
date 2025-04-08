@@ -2,8 +2,9 @@
 
 def validarCPF(cpf):
     
-    #Retira caracteres (. e -)
-    cpf = cpf.replace(".", "").replace("-", "")
+    #Valida se tem caracter (. ou -) 
+    if len(cpf) == 14:
+        cpf = cpf.replace(".", "").replace("-", "")
     
     #Valida se CPF tem 11 digitos
     if len(cpf) != 11:
